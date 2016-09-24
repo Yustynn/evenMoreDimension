@@ -9,9 +9,15 @@
       "eventPage.js"
     ]
   },
+  "permissions": [
+    "activeTab"
+  ],
   "content_scripts": [
     {
       "matches": ["https://edimension.sutd.edu.sg/*"],
+      "css": [
+        "sass/style.css"
+      ],
       "js": [
         "jquery.js",
         "app.js"

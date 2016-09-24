@@ -1,0 +1,275 @@
+* {
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+body {
+  background: white !important;
+}
+
+h2 {
+  color: black !important;
+  letter-spacing: 2px !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+}
+
+#globalNavPageContentArea {
+  background: white !important;
+}
+
+#gatewayButtons,
+#loginHeader > ul,
+#copyright,
+#quick_links_lightbox_link,
+#global-avatar,
+.actionBarMicro,
+.hideoff {
+  display: none !important;
+}
+
+#breadcrumbs {
+  background: none !important;
+  border: none !important;
+}
+
+#breadcrumbs li {
+  font-weight: 300 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+#breadcrumbs li a {
+  font-weight: 300 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+#pageTitleText {
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 5px !important;
+  color: #ffffff !important;
+  padding: 5px 10px !important;
+  background: #dc3b60 !important;
+  font-size: 20px !important;
+}
+
+#pageTitleText span {
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 5px !important;
+  color: #ffffff !important;
+  padding: 5px 10px !important;
+  background: #dc3b60 !important;
+  font-size: 20px !important;
+}
+
+#pageTitleDiv {
+  background: none !important;
+}
+
+#content {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#content_listContainer li a,
+#content_listContainer li h3 {
+  font-weight: 300 !important;
+  letter-spacing: 1px !important;
+}
+
+img.item_icon {
+  height: 45px !important;
+  padding-left: 5px !important;
+}
+
+img.item_icon[src*="document_on"],
+img.item_icon[src*="file_on"] {
+  content: url(https://api.icons8.com/download/e8fe7593ab386e8b9a396fe6f0f82ecbc4bbcc07/Color/PNG/256/Very_Basic/document-256.png) !important;
+}
+
+img.item_icon[src*="link_on"] {
+  content: url(https://cdn1.iconfinder.com/data/icons/logotypes/32/chrome-512.png) !important;
+  height: 35px !important;
+  padding-left: 12px !important;
+}
+
+img.item_icon[src*="folder_on"] {
+  content: url(http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/512/Folder-icon.png) !important;
+  height: 40px !important;
+  padding-left: 12px !important;
+}
+
+img.item_icon[src*="videoContent50"] {
+  content: url(https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-512.png) !important;
+}
+
+#loginPageContainer {
+  background: #3498db !important;
+}
+
+.loginBody {
+  background: none !important;
+}
+
+.loginBody input {
+  border: 0 !important;
+  border-radius: 0px !important;
+  color: white !important;
+  letter-spacing: 2px !important;
+  padding: 10px !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+  border-bottom: 1px solid white !important;
+  background: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.loginBody #entry-login {
+  background: #dc3b60 !important;
+  color: white !important;
+  font-weight: 400 !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+  border-bottom: none !important;
+}
+
+.loginBody label {
+  color: white !important;
+  letter-spacing: 4px !important;
+  font-size: 12px !important;
+}
+
+#loginFormList > li:nth-child(4) > span > a {
+  border: none !important;
+  color: white !important;
+  text-transform: lowercase !important;
+  font-weight: 300 !important;
+  letter-spacing: 0px !important;
+}
+
+#loginRedirectProviders {
+  display: none !important;
+}
+
+#loginRedirectProviders h3 {
+  display: none !important;
+}
+
+#loginContainer > div.clearfix.loginBody {
+  padding: 100px 0 0 !important;
+}
+
+#gatewayButtons,
+#loginHeader > ul {
+  display: none !important;
+}
+
+div#loginBox:before {
+  height: 130px !important;
+  content: '' !important;
+  width: 250px !important;
+  display: block !important;
+  background-image: url(http://wearesutd.sutd.edu.sg/wp-content/uploads/2014/12/SUTD-Logo-MIT-Inverse-Full_2x.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  margin: 0 auto !important;
+  margin-left: 180px !important;
+  margin-bottom: 100px !important;
+}
+
+#topTabs {
+  background-color: black !important;
+  background-image: url(http://www.helixcentre.com/wp-content/uploads/2013/11/sutd-logo-320x320.png) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position-x: 28px !important;
+}
+
+#global-nav-link {
+  background: none !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+#global-nav-link:before {
+  content: "Hi" !important;
+}
+
+#badgeTotalCount {
+  background: #dc3b60 !important;
+}
+
+.global-nav-bar.logout a {
+  background-color: transparent !important;
+}
+
+#breadcrumbs {
+  background: none !important;
+  border: none !important;
+}
+
+#breadcrumbs li {
+  font-weight: 300 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+#breadcrumbs li a {
+  font-weight: 300 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+.menuWrap {
+  background-color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.menuWrap-inner {
+  background-color: #fbf9f9 !important;
+}
+
+table#appTabList a span {
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+}
+
+.actionBarMicro {
+  background: #dc3b60 !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+#courseMenuPalette .nav a {
+  background: #dc3b60 !important;
+  border: none !important;
+}
+
+#appTabList .active a {
+  color: #dc3b60 !important;
+}
+
+#courseMenuPalette_paletteTitleHeading a {
+  font-weight: 400 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+#courseMenuPalette_contents li a {
+  font-weight: 300 !important;
+  letter-spacing: 1px !important;
+}
+
+.yp-dl img {
+  height: 30px !important;
+  margin-right: 10px !important;
+}

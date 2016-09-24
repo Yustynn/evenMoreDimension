@@ -11,6 +11,12 @@ const watch = require('gulp-watch');
 
 gulp.task( 'default', () => {
   gulp.src('./sass/main.sass', { base: './' })
+    .pipe(plumber({
+        errorHandler: function (err) {
+            console.log(err);
+            this.emit('end');
+        }
+    }))
     .pipe( sass().on('error', sass.logError) )
     .pipe( cssVip() )
     .pipe( rename('style.css'))

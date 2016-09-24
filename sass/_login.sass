@@ -1,0 +1,54 @@
+#loginPageContainer
+  background: #3498db
+
+// remove default logo
+.loginBody
+  background: none
+
+  input
+    +lined(white)
+
+  // login button
+  #entry-login
+    background: #dc3b60
+    color: white
+    font-weight: 400
+    letter-spacing: 3px
+    text-transform: uppercase
+    border-bottom: none
+
+  label
+    color: white
+    letter-spacing: 4px
+    font-size: 12px
+
+#loginFormList > li:nth-child(4) > span > a
+  border: none
+  color: white
+  text-transform: lowercase
+  font-weight: 300
+  letter-spacing: 0px
+
+#loginRedirectProviders
+  h3
+    display: none
+  display: none
+
+#loginContainer > div.clearfix.loginBody
+  padding: 100px 0 0
+
+#gatewayButtons, #loginHeader > ul
+  display: none
+
+
+div#loginBox:before
+  height: 130px
+  content: ''
+  width: 250px
+  display: block
+  background-image: url(http://wearesutd.sutd.edu.sg/wp-content/uploads/2014/12/SUTD-Logo-MIT-Inverse-Full_2x.png)
+  background-repeat: no-repeat
+  background-size: contain
+  margin: 0 auto
+  margin-left: 180px
+  margin-bottom: 100px
