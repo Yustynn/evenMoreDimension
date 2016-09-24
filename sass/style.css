@@ -271,6 +271,7 @@ table#appTabList a span {
 
 .yp-dl img {
   height: 30px !important;
+  margin-left: -5px !important;
   margin-right: 10px !important;
 }
 
