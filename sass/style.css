@@ -273,3 +273,44 @@ table#appTabList a span {
   height: 30px !important;
   margin-right: 10px !important;
 }
+
+.portlet {
+  border: none !important;
+  background: none !important;
+}
+
+.portlet ul li a {
+  color: #dc3b60 !important;
+  font-weight: 400 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+.contentBox {
+  border: none !important;
+}
+
+.actionBar {
+  background: none !important;
+  border: none !important;
+}
+
+.actionBar a {
+  background: #dc3b60 !important;
+  color: white !important;
+  letter-spacing: 1px !important;
+  font-weigth: 400 !important;
+  text-transform: uppercase !important;
+}
+
+.paneTabs {
+  background: white !important;
+  border: none !important;
+}
+
+.paneTabs a {
+  background: white !important;
+  color: black !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
