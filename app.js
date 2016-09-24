@@ -3,17 +3,11 @@ const EDIM_URL = 'https://edimension.sutd.edu.sg';
 
 let links = $('#content_listContainer li a');
 
-console.log('before', links);
-
 links = links.filter(function() {
   const imgSrc = $(this).closest('li[id *=contentListItem]').children('img').attr('src');
 
-  console.log($(this).closest('li[id *=contentListItem]'))
-
   return imgSrc.includes('document') || imgSrc.includes('file');
 });
-
-console.log('after', links);
 
 links.each(function(i) {
   const link = $(this)
