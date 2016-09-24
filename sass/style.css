@@ -170,6 +170,10 @@ img.item_icon[src*="videoContent50"] {
   display: none !important;
 }
 
+#loginBox {
+  background: #3498db !important;
+}
+
 div#loginBox:before {
   height: 130px !important;
   content: '' !important;
