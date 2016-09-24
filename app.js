@@ -6,8 +6,9 @@ let links = $('#content_listContainer li a');
 console.log('before', links);
 
 links = links.filter(function() {
-  const imgSrc = $(this).closest('li').children('img').attr('src');
-  console.log($(this).closest('li').children('img'))
+  const imgSrc = $(this).closest('li[id *=contentListItem]').children('img').attr('src');
+
+  console.log($(this).closest('li[id *=contentListItem]'))
 
   return imgSrc.includes('document') || imgSrc.includes('file');
 });
