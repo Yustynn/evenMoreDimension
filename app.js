@@ -2,8 +2,9 @@
  ** CONSTANTS
  */
 
-const DL_ICON_SRC = 'https://images.designtrends.com/wp-content/uploads/2015/12/02045154/Download-Icons38.png'
 const EDIM_URL = 'https://edimension.sutd.edu.sg';
+const FOLDER_DL_ICON_SRC = 'http://www.iconsdb.com/icons/preview/caribbean-blue/download-2-xxl.png'
+const INDIV_DL_ICON_SRC = 'https://images.designtrends.com/wp-content/uploads/2015/12/02045154/Download-Icons38.png'
 
 
 const TYPE_DOWNLOADABILITY = {
@@ -58,7 +59,7 @@ const folderLinks = getFolders(allLinks);
 // add download icons for files/documents
 downloadableLinks.each(function() {
   const url = getUrl(this);
-  const dlBtn = $(`<a href=${url} class='yp-dl' download><img src=${DL_ICON_SRC}></img></a>`);
+  const dlBtn = $(`<a href=${url} class='yp-dl' download><img src=${INDIV_DL_ICON_SRC}></img></a>`);
 
   $(this).prepend(dlBtn);
 })
@@ -88,7 +89,7 @@ const downloadFolder = (url) => {
 folderLinks.each(function() {
   const url = getUrl(this);
 
-  const dlBtn = $(`<a href=${url} class='yp-dl' download><img src=${DL_ICON_SRC}></img></a>`);
+  const dlBtn = $(`<a href=${url} class='yp-dl' download><img src=${FOLDER_DL_ICON_SRC}></img></a>`);
   dlBtn.click((e) => {
     e.preventDefault();
     downloadFolder(url);
