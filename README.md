@@ -5,6 +5,8 @@ Specifically, it currently does 2 things, currently.
 1. Add download buttons to all files/documents (so you don't have to keep)
 2. Makes eDimension look *better*.
 
+[Even More Dimension chrome extension](https://chrome.google.com/webstore/detail/even-more-dimension/defapkcdijpdlejlkhbkklbnmcpcpijm)
+
 ## Why make this?
 We're a tech and design school, and our LMS doesn't fit in. It's archaic, ugly and the experience of using it just isn't great. This is an attempt to make it better.
 
