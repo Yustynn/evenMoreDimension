@@ -8,22 +8,40 @@ const TYPE_DOWNLOADABILITY = {
   link: false
 };
 
+const getDownloadable = function(els) {
+  return $(els).filter(function() {
+    return TYPE_DOWNLOADABILITY[getType(this)];
+  });
+}
+
+const getFolders = function(els) {
+  return $(els).filter(function() {
+    return getType(this) === 'folder';
+  });
+}
 // types: document, file, folder, link
 const getType = (el) => {
   el = $(el);
   const imgSrc = el.closest('li[id *=contentListItem]').children('img').attr('src');
 
-  if (!imgSrc) return null;
+  if (!imgSrc) return null; // (in)sanity check
 
   // extract type from imgSrc
   return imgSrc.replace(/\/.+\//, '').replace(/_on.+/, '');
 }
 
-const links = $('#content_listContainer li a').filter(function() {
-  return TYPE_DOWNLOADABILITY[getType(this)];
-});
+const getAllLinks = (el = $('body')) => {
+    return $(el).find('#content_listContainer li a');
+}
 
-links.each(function(i) {
+// retrieve links and filter for downloadable ones only
+const allLinks = getAllLinks()
+
+const downloadableLinks = getDownloadable(allLinks);
+const folderLinks = getFolders(allLinks);
+console.log(folderLinks);
+
+downloadableLinks.each(function(i) {
   const link = $(this)
   const url = EDIM_URL + link.attr('href');
   const dlBtn = $(`<a href=${url} class='yp-dl' download><img src=${DL_ICON_SRC}></img></a>`);
