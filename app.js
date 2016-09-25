@@ -74,7 +74,12 @@ const downloadFolder = (url) => {
       chrome.runtime.sendMessage(url);
     });
 
+    // #recursion
     const folderLinks = getFolders(allLinks);
+    folderLinks.each(function() {
+      const url = getUrl(this);
+      downloadFolder(url);
+    });
   });
 }
 
