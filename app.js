@@ -1,12 +1,26 @@
 const DL_ICON_SRC = 'https://images.designtrends.com/wp-content/uploads/2015/12/02045154/Download-Icons38.png'
 const EDIM_URL = 'https://edimension.sutd.edu.sg';
 
-let links = $('#content_listContainer li a');
+const TYPE_DOWNLOADABILITY = {
+  document: true,
+  file: true,
+  folder: false,
+  link: false
+};
 
-links = links.filter(function() {
-  const imgSrc = $(this).closest('li[id *=contentListItem]').children('img').attr('src');
+// types: document, file, folder, link
+const getType = (el) => {
+  el = $(el);
+  const imgSrc = el.closest('li[id *=contentListItem]').children('img').attr('src');
 
-  return imgSrc.includes('document') || imgSrc.includes('file');
+  if (!imgSrc) return null;
+
+  // extract type from imgSrc
+  return imgSrc.replace(/\/.+\//, '').replace(/_on.+/, '');
+}
+
+const links = $('#content_listContainer li a').filter(function() {
+  return TYPE_DOWNLOADABILITY[getType(this)];
 });
 
 links.each(function(i) {

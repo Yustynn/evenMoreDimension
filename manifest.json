@@ -3,7 +3,7 @@
 
   "name": "Even More Dimension",
   "description": "Let's make the LMS something worthy of tech and design",
-  "version": "1.0",
+  "version": "1.1.0",
   "background": {
     "scripts": [
       "eventPage.js"
