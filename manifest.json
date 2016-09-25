@@ -10,7 +10,8 @@
     ]
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "downloads"
   ],
   "content_scripts": [
     {
