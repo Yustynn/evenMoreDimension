@@ -11,10 +11,16 @@ Specifically, it currently does 3 things, currently.
 ## Why make this?
 We're a tech and design school, and our LMS doesn't fit in. It's archaic, ugly and the experience of using it just isn't great. This is an attempt to make it better.
 
-## Future plans?
+## Future feature plans?
 [x] Add recursive download button to download the entire week's documents all at once.
 
 [ ] Semantic filenames when downloading. I hate it when PDFs are hard to identify (e.g. 154389341.pdf instead of HW1.pdf)
+
+
+## Why is Google Analytics in there?
+Yeah, I debated about this for a while because I'm worried people don't fully understand just how anonymous it is. But to be honest it's completely anonymous so I will never know that it's you downloading those crazy, crazy things on eDimension.
+
+The reason I added it (and fret no, your particular privacy is not even a little compromised), is because I'd like some stats to show the school officially that these features (downloading folders etc) are useful for students. And hopefully get them to officially recommend the chrome extension, or (best case) get a better LMS.
 
 ## How Can I Help?
 Any way you want.
