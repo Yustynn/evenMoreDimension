@@ -273,12 +273,6 @@ table#appTabList a span {
   letter-spacing: 1px !important;
 }
 
-.yp-dl img {
-  height: 25px !important;
-  margin-left: -5px !important;
-  margin-right: 10px !important;
-}
-
 .portlet {
   border: none !important;
   background: none !important;
@@ -318,4 +312,16 @@ table#appTabList a span {
   color: black !important;
   letter-spacing: 1px !important;
   text-transform: uppercase !important;
+}
+
+.yp-dl img {
+  height: 25px !important;
+  margin-left: -5px !important;
+  margin-right: 10px !important;
+}
+
+#yp-dl-all img {
+  cursor: pointer !important;
+  height: 33px !important;
+  margin-top: -9px !important;
 }

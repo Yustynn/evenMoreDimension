@@ -14,7 +14,11 @@ We're a tech and design school, and our LMS doesn't fit in. It's archaic, ugly a
 ## Future feature plans?
 [x] Add recursive download button to download the entire week's documents all at once.
 
-[ ] Semantic filenames when downloading. I hate it when PDFs are hard to identify (e.g. 154389341.pdf instead of HW1.pdf)
+[x] Add 'download all' button to each page
+
+[ ] Semantic filenames when downloading. I hate it when PDFs are hard to identify (e.g. 154389341.pdf instead of HW1.pdf) **Note: Arjun is on this**
+
+[ ] Better download icons. The stylistic inconsistency is grating.
 
 
 ## Why is Google Analytics in there?

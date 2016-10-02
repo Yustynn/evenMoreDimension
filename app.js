@@ -52,10 +52,15 @@ const getLinkInfo = (el) => {
   el = $(el);
 
   const url = EDIM_URL + el.attr('href');
-  const title = el.children('span').text();
+  const title = el.children('span').text() || el.text();
 
   return { url, title };
 }
+
+
+/*
+ ** START (FURREAL)
+ */
 
 const getAllLinks = (el = $('body')) => {
     return $(el).find('#content_listContainer li a');
@@ -66,9 +71,31 @@ const allLinks = getAllLinks();
 const downloadableLinks = getDownloadable(allLinks);
 const folderLinks = getFolders(allLinks);
 
-/*
- ** START (FURREAL)
- */
+
+// Download All Btn
+if ( downloadableLinks.length ) {
+  const dlAllBtn = $(`<a id="yp-dl-all"><img src=${FOLDER_DL_ICON_SRC}></img></a>`);
+  $('#pageTitleBar').append(dlAllBtn);
+
+  dlAllBtn.click( (e) => {
+    e.preventDefault();
+
+    _gaq.push(['_trackEvent', 'Download', 'Request Page Download'])
+
+    // handle links on current page
+    downloadableLinks.each(function() {
+      const {url, title} = getLinkInfo(this);
+      _gaq.push(['_trackEvent', 'Download', 'from Page', title])
+      chrome.runtime.sendMessage(url);
+    });
+
+    // handle folders on current page
+    folderLinks.each(function() {
+      const { url } = getLinkInfo(this);
+      downloadFolder(url);
+    });
+  })
+}
 
 // add download icons for files/documents
 downloadableLinks.each(function() {
