@@ -73,8 +73,8 @@ const folderLinks = getFolders(allLinks);
 // add download icons for files/documents
 downloadableLinks.each(function() {
   const {url, title} = getLinkInfo(this);
-
-  const dlBtn = $(`<a href=${url} class='yp-dl' download><img src=${INDIV_DL_ICON_SRC}></img></a>`);
+  const filename = $(this).text();
+  const dlBtn = $(`<a href=${url} class='yp-dl' download=${filename}><img src=${INDIV_DL_ICON_SRC}></img></a>`);
   dlBtn.click(() => { _gaq.push(['_trackEvent', 'Download', 'from File', title]) });
 
   $(this).prepend(dlBtn);
