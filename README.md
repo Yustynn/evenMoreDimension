@@ -32,5 +32,16 @@ Any way you want.
 * Make pull requests
 * If you're uncomfortable with GitHub, email me at {myusername}@gmail.com
 
+Should you choose to make a pull request and are changing up the styling, here's some info you might need.
+
+I built this with [Sass](http://sass-lang.com/), and I've included a compilation watch task. Here's how you use it.
+
+1. Make sure npm is installed (it should be if you have Node.js installed)
+2. Open up a terminal
+3. Run `npm i && gulp watch`
+
+That's it. The CSS should auto-compile. I'm gonna modularize the JS too, so running gulp will eventually be necessary for that as well.
+
+
 # **LET'S MAKE EDIMENSION A BETTER PLACE**
 Yustynn.
