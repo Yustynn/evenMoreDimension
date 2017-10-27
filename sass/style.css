@@ -153,16 +153,22 @@ img.item_icon[src*="videoContent50"] {
   letter-spacing: 0px !important;
 }
 
-#loginRedirectProviders {
-  display: none !important;
-}
-
-#loginRedirectProviders h3 {
+#loginFormFields {
   display: none !important;
 }
 
 #loginContainer > div.clearfix.loginBody {
   padding: 100px 0 0 !important;
+}
+
+#loginRedirectProviders h1 {
+  background: white !important;
+  padding: 20px !important;
+  color: black !important;
+}
+
+#loginRedirectProviders h3 {
+  display: none !important;
 }
 
 #gatewayButtons,
@@ -184,7 +190,7 @@ div#loginBox:before {
   background-size: contain !important;
   margin: 0 auto !important;
   margin-left: 180px !important;
-  margin-bottom: 100px !important;
+  margin-bottom: 60px !important;
 }
 
 #topTabs {
