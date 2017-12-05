@@ -1,9 +1,8 @@
 {
   "manifest_version": 2,
-
   "name": "Even More Dimension",
   "description": "Let's make the LMS something worthy of tech and design",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "background": {
     "scripts": [
       "eventPage.js"
@@ -26,5 +25,8 @@
       ]
     }
   ],
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "web_accessible_resources": [
+    "images/*"
+  ]
 }

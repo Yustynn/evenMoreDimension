@@ -11,9 +11,9 @@ _gaq.push(['_trackPageview']);
  */
 
 const EDIM_URL = 'https://edimension.sutd.edu.sg';
-const FOLDER_DL_ICON_SRC = 'http://www.iconsdb.com/icons/preview/caribbean-blue/download-2-xxl.png';
-const INDIV_DL_ICON_SRC = 'https://images.designtrends.com/wp-content/uploads/2015/12/02045154/Download-Icons38.png';
-const SUTD_SQ_LOGO_SRC = 'https://userscontent2.emaze.com/images/595867ce-990f-4392-8143-9e45c8c92358/196d67bf-8d3d-48c3-a344-a4bf17dd86acimage13.png';
+const FOLDER_DL_ICON_SRC = chrome.extension.getURL('/images/download.png');
+const INDIV_DL_ICON_SRC = chrome.extension.getURL('/images/download.png');
+const SUTD_SQ_LOGO_SRC =  chrome.extension.getURL('/images/sutd.png');
 
 const TYPE_DOWNLOADABILITY = {
   document: true,
@@ -111,7 +111,6 @@ downloadableLinks.each(function() {
   $(this).prepend(dlBtn);
 })
 
-
 const downloadFolder = (url) => {
   $.get(url).then( (data) => {
     _gaq.push(['_trackEvent', 'Download', 'Request Folder Download'])
@@ -131,7 +130,6 @@ const downloadFolder = (url) => {
     });
   });
 }
-
 
 // add download icons for folders
 folderLinks.each(function() {
