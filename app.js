@@ -95,7 +95,7 @@ if ( downloadableLinks.length ) {
     // handle folders on current page
     folderLinks.each(function() {
       const { url, title } = getLinkInfo(this);
-      sanitized_title = title.replace(/[\\\/\:\*\]\?\"\<\>\|]/g, '');
+      const sanitized_title = title.replace(/[\\\/\:\*\]\?\"\<\>\|]/g, '');
       downloadFolder(url, curr_path.concat(`${sanitized_title}/`));
     });
   })
@@ -126,7 +126,7 @@ const downloadFolder = (url, curr_path = '') => {
     const folderLinks = getFolders(allLinks);
     folderLinks.each(function() {
       const { url, title } = getLinkInfo(this);
-      sanitized_title = title.replace(/[\\\/\:\*\]\?\"\<\>\|]/g, '');
+      const sanitized_title = title.replace(/[\\\/\:\*\]\?\"\<\>\|]/g, '');
       downloadFolder(url, curr_path.concat(`${sanitized_title}/`));
     });
   });
