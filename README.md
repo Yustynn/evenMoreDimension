@@ -1,5 +1,7 @@
+![](http://yustynn.tech/public/images/edim.gif)
+
 ## What is this and what's it do?
-It's the source code for a chrome extension that improves eDimension.
+It's the source code for a **chrome extension** that improves eDimension.
 
 Specifically, it currently does 3 things, currently.
 1. Add download buttons to all files/documents (so you don't have to keep)
