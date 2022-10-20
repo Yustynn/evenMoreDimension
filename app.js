@@ -42,7 +42,6 @@ const getFolders = function(els) {
 const getType = (el) => {
   el = $(el);
   const imgSrc = el.closest('li[id *=contentListItem]').children('img').attr('src');
-
   if (!imgSrc) return null; // (in)sanity check
 
   // extract type from imgSrc
@@ -64,14 +63,12 @@ const getLinkInfo = (el) => {
  */
 
  $('head link[type="image/x-icon"]').attr('href', SUTD_SQ_LOGO_SRC);
- console.log
 
 const getAllLinks = (el = $('body')) => {
     return $(el).find('#content_listContainer li a');
 }
 
 const allLinks = getAllLinks();
-
 const downloadableLinks = getDownloadable(allLinks);
 const folderLinks = getFolders(allLinks);
 
@@ -86,17 +83,20 @@ if ( downloadableLinks.length ) {
 
     _gaq.push(['_trackEvent', 'Download', 'Request Page Download'])
 
+    const curr_path = 'content/' // k. generic path to store all the downloads
+
     // handle links on current page
     downloadableLinks.each(function() {
       const {url, title} = getLinkInfo(this);
       _gaq.push(['_trackEvent', 'Download', 'from Page', title])
-      chrome.runtime.sendMessage(url);
+      chrome.runtime.sendMessage({url, curr_path, title});
     });
 
     // handle folders on current page
     folderLinks.each(function() {
-      const { url } = getLinkInfo(this);
-      downloadFolder(url);
+      const { url, title } = getLinkInfo(this);
+      const sanitized_title = title.replace(/[\\\/\:\*\]\?\"\<\>\|]/g, '');
+      downloadFolder(url, curr_path.concat(`${sanitized_title}/`));
     });
   })
 }
@@ -111,7 +111,7 @@ downloadableLinks.each(function() {
   $(this).prepend(dlBtn);
 })
 
-const downloadFolder = (url) => {
+const downloadFolder = (url, curr_path = '') => {
   $.get(url).then( (data) => {
     _gaq.push(['_trackEvent', 'Download', 'Request Folder Download'])
     const allLinks = getAllLinks(data);
@@ -120,25 +120,28 @@ const downloadFolder = (url) => {
     dlLinks.each(function() {
       const {url, title} = getLinkInfo(this);
       _gaq.push(['_trackEvent', 'Download', 'from Folder', title])
-      chrome.runtime.sendMessage(url);
+      chrome.runtime.sendMessage({url, curr_path, title});
     });
 
     const folderLinks = getFolders(allLinks);
     folderLinks.each(function() {
-      const { url } = getLinkInfo(this);
-      downloadFolder(url);
+      const { url, title } = getLinkInfo(this);
+      const sanitized_title = title.replace(/[\\\/\:\*\]\?\"\<\>\|]/g, '');
+      downloadFolder(url, curr_path.concat(`${sanitized_title}/`));
     });
   });
 }
 
 // add download icons for folders
 folderLinks.each(function() {
-  const { url } = getLinkInfo(this);
+  const { url, title } = getLinkInfo(this);
 
   const dlBtn = $(`<a href=${url} class='yp-dl' download><img src=${FOLDER_DL_ICON_SRC}></img></a>`);
   dlBtn.click((e) => {
     e.preventDefault();
-    downloadFolder(url);
+    const sanitized_title = title.replace(/[\\\/\:\*\]\?\"\<\>\|]/g, '');
+    const curr_path = `${sanitized_title}/`
+    downloadFolder(url, curr_path);
   });
 
   $(this).prepend(dlBtn);
